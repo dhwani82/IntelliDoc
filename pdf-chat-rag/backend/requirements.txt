@@ -1,0 +1,9 @@
+fastapi==0.128.0
+uvicorn==0.40.0
+python-multipart==0.0.22
+pymupdf==1.26.7
+faiss-cpu==1.13.2
+openai==2.15.0
+pydantic==2.12.5
+python-dotenv==1.2.1
+

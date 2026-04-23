@@ -1,0 +1,9 @@
+{
+  "name": "document-parser",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Document Parser - PDF Chat RAG. Start backend, frontend, and open browser.",
+  "scripts": {
+    "start": "powershell -ExecutionPolicy Bypass -File ./pdf-chat-rag/start.ps1"
+  }
+}
