@@ -1,0 +1,4 @@
+strategy,accuracy,groundedness,combined_score,accuracy_hits,groundedness_hits,num_questions,avg_latency_seconds
+plain,1.0,1.0,1.0,7,7,7,1.752
+few_shot,1.0,1.0,1.0,7,7,7,1.213
+chain_of_thought,1.0,1.0,1.0,7,7,7,2.443

@@ -1,77 +1,52 @@
 from typing import List, Dict
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
 def chunk_text(text: str, chunk_size: int = 700, overlap: int = 100) -> List[Dict]:
     """
-    Split text into semantically meaningful chunks with overlap.
-    Optimized for RAG pipelines.
+    Split document text into overlapping chunks for embedding and retrieval.
 
-    Args:
-        text: Full document text
-        chunk_size: Maximum characters per chunk
-        overlap: Overlap between chunks
+    Uses RecursiveCharacterTextSplitter with separators ordered from coarsest
+    to finest: paragraph (\\n\\n) → line (\\n) → sentence (. ? !) → word → character.
+    The splitter prefers earlier separators so chunks break on natural boundaries
+    whenever possible. That preserves semantic units better than a naive
+    fixed-length slice, which often cuts mid-sentence and hurts retrieval quality.
 
-    Returns:
-        List of chunk dictionaries with text/start/end
+    Returns dicts with cleaned text plus start/end offsets in the original string
+    so callers can map chunks back to pages.
     """
-
     if chunk_size <= 0:
         raise ValueError("chunk_size must be greater than 0")
-
     if overlap < 0:
         raise ValueError("overlap must be >= 0")
-
     if overlap >= chunk_size:
         raise ValueError("overlap must be smaller than chunk_size")
 
     text = text.strip()
-    text_length = len(text)
+    if not text:
+        return []
+
+    splitter = RecursiveCharacterTextSplitter(
+        chunk_size=chunk_size,
+        chunk_overlap=overlap,
+        # Prefer paragraph/line/sentence breaks before falling back to words/chars.
+        separators=["\n\n", "\n", ". ", "? ", "! ", " ", ""],
+    )
+
+    raw_chunks = splitter.split_text(text)
 
     chunks: List[Dict] = []
-    start = 0
+    search_from = 0
 
-    while start < text_length:
-
-        end = min(start + chunk_size, text_length)
-        chunk = text[start:end]
-
-        # Try to split on natural boundaries
-        if end < text_length:
-
-            break_points = [
-                chunk.rfind("\n\n"),   # paragraph break
-                chunk.rfind("\n"),     # newline
-                chunk.rfind(". "),     # sentence end
-                chunk.rfind("? "),
-                chunk.rfind("! "),
-            ]
-
-            best_break = max(break_points)
-
-            # Only adjust if break point is near end
-            if best_break > chunk_size * 0.6:
-                end = start + best_break + 1
-                chunk = text[start:end]
-
-        cleaned_chunk = " ".join(chunk.split()).strip()
-
-        if cleaned_chunk:
-            chunks.append({
-                "text": cleaned_chunk,
-                "start": start,
-                "end": end
-            })
-
-        # Stop if we reached end
-        if end >= text_length:
-            break
-
-        next_start = end - overlap
-
-        # Ensure forward progress
-        if next_start <= start:
-            next_start = end
-
-        start = next_start
+    for raw_chunk in raw_chunks:
+        cleaned_chunk = " ".join(raw_chunk.split()).strip()
+        if not cleaned_chunk:
+            continue
+        start = text.find(raw_chunk.strip(), search_from)
+        if start == -1:
+            start = search_from
+        end = start + len(raw_chunk.strip())
+        search_from = max(start + 1, end - overlap)
+        chunks.append({"text": cleaned_chunk, "start": start, "end": end})
 
     return chunks

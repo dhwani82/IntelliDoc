@@ -1,0 +1,794 @@
+[
+  {
+    "text": "What Kubernetes project is described?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Describe the Kubernetes project in this document",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Tell me about the Spring Boot e-commerce app",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What cloud platform was the app deployed to?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Was the app deployed to EKS?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Which AWS Kubernetes service was used?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What tool was used to templatize the Kubernetes manifests?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Did they use Helm charts?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "How were the Kubernetes YAML files templated?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What CI/CD tools were used?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Was Jenkins part of the pipeline?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "How did GitHub fit into CI/CD?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Was the Kubernetes work professional experience or coursework?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Is the K8s project from SWE 645?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What happens if a pod crashes?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "How does the Deployment controller keep replicas running?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "How were secrets like database credentials handled?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Did they use Kubernetes Secrets?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What Kubernetes object type was used for the three services, and why not StatefulSet?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Why were the services Deployments instead of StatefulSets?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "How did the services discover each other in the cluster?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Was DNS used for Kubernetes service discovery?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "How would you debug a service that is not responding in the cluster?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Which kubectl commands would you use to debug a pod?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Why EKS instead of self-managing Kubernetes?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What does the document say about the EKS control plane?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What is DocuMind?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Tell me about the DocuMind project",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What five tools does the DocuMind agent use?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Does DocuMind use grep_code and vector_search?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "How was DocuMind evaluated?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Was RAGAS used to evaluate DocuMind?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What limitation did vector-only retrieval have in DocuMind?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Why did DocuMind need a call graph besides vector search?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What is Event-Connect and how was it deployed?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Describe the Event-Connect microservices",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Was Event-Connect deployed with ECR and EC2?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Who is the interview with and what company?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Who is Wei Chen?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What company was the interview with?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What does Unity Gaming Services provide?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Does Unity offer multiplayer and analytics services?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Summarize this document",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Summarize the uploaded PDF",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What projects are listed in this resume?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Walk me through the candidate's experience",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What skills are listed?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What programming languages does the candidate know?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Tell me about the education section",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What is on page 1 of the document?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Quote the experience section",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "List the backend technologies mentioned",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What did they build with LangGraph?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Explain the React agent in DocuMind",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "How many services were in the e-commerce app?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What is the product catalog / cart / checkout split?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Any certifications mentioned?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What cloud services appear in this PDF?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Compare the Kubernetes project and Event-Connect",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What structural retrieval means in DocuMind",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "find_symbol and who_calls tools",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "How is impact_of used in DocuMind?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What was the SWE 645 assignment about?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Does the resume mention FastAPI or Spring Boot?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "Give me a short bio based on this document",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "What should I ask this candidate in an interview?",
+    "label": "needs_retrieval"
+  },
+  {
+    "text": "hi",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "hello",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "hey",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "hey there",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "hiya",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "yo",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "good morning",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "good afternoon",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "good evening",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "howdy",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "how's it going",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "how are you",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "how are you doing",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "how are you today",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "what's up",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "sup",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "thanks",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "thank you",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "thanks a lot",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "thank you so much",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "thx",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "cheers",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "great job",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "awesome",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "nice",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "cool",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "you are helpful",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "you're the best",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "lol",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "haha",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "who are you",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "what's your name",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "what can you do",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "can you help me",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "I have a question",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "ok",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "okay",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "got it",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "sounds good",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "never mind",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "that's all",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "nothing else",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "bye",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "goodbye",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "see you",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "take care",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "have a nice day",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "good night",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "please",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "sorry",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "my bad",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "wait",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "hold on",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "tell me a joke",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "make me laugh",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "are you an AI",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "are you ChatGPT",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "how old are you",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "nice to meet you",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "let's chat",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "talk to me",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "I'm bored",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "how is your day",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "what's your favorite color",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "do you like me",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "good to know",
+    "label": "general_chitchat"
+  },
+  {
+    "text": "what's the weather today",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "weather in Seattle",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "will it rain tomorrow",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "who won the Super Bowl",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "NBA score last night",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "stock price of Apple",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "what's Bitcoin worth",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "should I buy Tesla stock",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "how do I cook pasta",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "give me a pizza recipe",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "calorie count of a banana",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "workout plan for beginners",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "how to train a dog",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "I have a headache, what medicine should I take",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "should I take ibuprofen",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "legal advice for a speeding ticket",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "write a Python bubble sort",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "implement quicksort in Java",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "debug my React app that's not in this PDF",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "translate hello to Spanish",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "what is the capital of France",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "who is the president of the United States",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "latest world news",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "celebrity gossip today",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "Netflix show recommendations",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "best restaurants near me",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "Uber to the airport",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "flight status for DL123",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "how to reset my WiFi router",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "help me install Windows",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "how to jailbreak an iPhone",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "explain quantum physics",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "solve this integral for my homework",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "what is 234 times 891",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "play rock paper scissors",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "write a poem about cats",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "lyrics to a popular song",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "sports betting odds",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "cryptocurrency trading tips",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "how to get a mortgage",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "plan a trip to Japan",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "what's on sale at Amazon",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "recipe for chocolate cake",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "my printer won't connect",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "fix a blue screen of death",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "who invented the telephone",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "explain the plot of Inception",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "best GPU for gaming",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "how do I learn guitar",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "write an email to my landlord",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "what's the meaning of life",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "horoscope for Leo",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "is it going to snow",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "vaccine side effects",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "divorce lawyer recommendations",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "how to beat the stock market",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "generate a logo for my startup",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "make a fortnite strategy",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "what's the score of the soccer match",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "convert 80 fahrenheit to celsius",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "when is the next solar eclipse",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "book a hotel in New York",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "how much is a Tesla Model 3",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "teach me French grammar",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "write SQL to drop a table",
+    "label": "out_of_scope"
+  },
+  {
+    "text": "what time is it in Tokyo",
+    "label": "out_of_scope"
+  }
+]

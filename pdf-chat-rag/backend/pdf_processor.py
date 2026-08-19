@@ -11,7 +11,9 @@ from vector_store import VectorStore
 # Thread pool so PDF extraction doesn't block the event loop
 _executor = ThreadPoolExecutor(max_workers=2)
 
-# Reduce memory: smaller batches, sequential (no concurrent)
+# Embed in batches: keeps peak memory down and isolates API failures to one batch
+# instead of losing the whole document on a single oversized request. Tradeoff is
+# more round-trips than one giant embed call.
 EMBED_BATCH_SIZE = 25
 EMBED_MAX_CONCURRENT = 1
 MAX_CHUNKS = 500  # Limit chunks to avoid MemoryError on large PDFs
@@ -19,7 +21,13 @@ MAX_TEXT_CHARS = 500_000  # Truncate very large documents
 
 
 def _extract_all_pages(doc_path: str) -> List[Dict]:
-    """Extract text from all pages (runs in thread, opens file once)."""
+    """
+    Extract text from every page of a PDF.
+
+    PyMuPDF (fitz) is synchronous/blocking. Callers should run this via
+    run_in_executor so it does not stall the asyncio event loop while pages
+    are read. Opens the file once and closes it in finally.
+    """
     doc = fitz.open(doc_path)
     try:
         return [
@@ -105,7 +113,16 @@ async def process_pdf(file_path: str, doc_id: str, vector_store: VectorStore):
 
         print(f"[INFO] Step 5: Storing vectors in FAISS...")
         vector_store.add_document(doc_id, embeddings, chunk_metadata)
-        print(f"[INFO] Step 5 done: vectors stored successfully")
+        stored_indices = vector_store.doc_indices.get(doc_id, [])
+        print(
+            f"[INFO] Step 5 done: stored {len(stored_indices)} chunks for doc_id={doc_id}, "
+            f"index.ntotal={vector_store.index.ntotal if vector_store.index else 0}"
+        )
+        for i, meta in enumerate(chunk_metadata[:3]):
+            print(
+                f"[DEBUG] chunk {i}: page={meta['page']}, chunk_id={meta['chunk_id']}, "
+                f"text_preview={meta['text'][:80]!r}"
+            )
 
         return {
             "doc_id": doc_id,

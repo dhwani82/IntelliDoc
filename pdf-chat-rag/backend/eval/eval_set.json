@@ -1,0 +1,20 @@
+[
+  {"question": "What Kubernetes project is described?", "expected_keywords": ["spring boot", "e-commerce"]},
+  {"question": "What cloud platform was the app deployed to?", "expected_keywords": ["eks"]},
+  {"question": "What tool was used to templatize the Kubernetes manifests?", "expected_keywords": ["helm"]},
+  {"question": "What CI/CD tools were used?", "expected_keywords": ["jenkins", "github"]},
+  {"question": "Was the Kubernetes work professional experience or coursework?", "expected_keywords": ["coursework", "swe 645"]},
+  {"question": "What happens if a pod crashes?", "expected_keywords": ["deployment controller", "replica"]},
+  {"question": "How were secrets like database credentials handled?", "expected_keywords": ["kubernetes secrets"]},
+  {"question": "What Kubernetes object type was used for the three services, and why not StatefulSet?", "expected_keywords": ["deployment", "stateless"]},
+  {"question": "How did the services discover each other in the cluster?", "expected_keywords": ["kubernetes services", "dns"]},
+  {"question": "How would you debug a service that is not responding in the cluster?", "expected_keywords": ["kubectl"]},
+  {"question": "What is DocuMind?", "expected_keywords": ["langgraph", "react agent"]},
+  {"question": "What five tools does the DocuMind agent use?", "expected_keywords": ["grep_code", "find_symbol", "who_calls", "impact_of", "vector_search"]},
+  {"question": "How was DocuMind evaluated?", "expected_keywords": ["ragas"]},
+  {"question": "What is Event-Connect and how was it deployed?", "expected_keywords": ["microservices", "ecr", "ec2"]},
+  {"question": "Who is the interview with and what company?", "expected_keywords": ["wei chen", "unity"]},
+  {"question": "What does Unity Gaming Services provide?", "expected_keywords": ["multiplayer", "analytics"]},
+  {"question": "Why EKS instead of self-managing Kubernetes?", "expected_keywords": ["control plane"]},
+  {"question": "What limitation did vector-only retrieval have in DocuMind?", "expected_keywords": ["structural", "call graph"]}
+]

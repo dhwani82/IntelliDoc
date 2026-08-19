@@ -1,0 +1,798 @@
+{
+  "doc_id": "d5d8a9c8-3d38-41b5-899c-d5e396472956",
+  "generation_backend": "gemini",
+  "num_questions": 18,
+  "winner": "few_shot",
+  "summaries": [
+    {
+      "strategy": "plain",
+      "accuracy": 1.0,
+      "groundedness": 1.0,
+      "combined_score": 1.0,
+      "accuracy_hits": 7,
+      "groundedness_hits": 7,
+      "num_questions": 7,
+      "avg_latency_seconds": 1.752
+    },
+    {
+      "strategy": "few_shot",
+      "accuracy": 1.0,
+      "groundedness": 1.0,
+      "combined_score": 1.0,
+      "accuracy_hits": 7,
+      "groundedness_hits": 7,
+      "num_questions": 7,
+      "avg_latency_seconds": 1.213
+    },
+    {
+      "strategy": "chain_of_thought",
+      "accuracy": 1.0,
+      "groundedness": 1.0,
+      "combined_score": 1.0,
+      "accuracy_hits": 7,
+      "groundedness_hits": 7,
+      "num_questions": 7,
+      "avg_latency_seconds": 2.443
+    }
+  ],
+  "per_strategy": {
+    "plain": [
+      {
+        "question": "What Kubernetes project is described?",
+        "expected_keywords": [
+          "spring boot",
+          "e-commerce"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 0.9286,
+        "latency_seconds": 2.399,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "The described Kubernetes project is a Spring Boot e-commerce app, split into three services: product catalog, cart, and order/checkout."
+      },
+      {
+        "question": "What cloud platform was the app deployed to?",
+        "expected_keywords": [
+          "eks"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.585,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "The app was deployed to AWS EKS."
+      },
+      {
+        "question": "What tool was used to templatize the Kubernetes manifests?",
+        "expected_keywords": [
+          "helm"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.41,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "Helm was used to templatize the Kubernetes manifests."
+      },
+      {
+        "question": "What CI/CD tools were used?",
+        "expected_keywords": [
+          "jenkins",
+          "github"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.996,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "The CI/CD tools used were Jenkins connected to GitHub."
+      },
+      {
+        "question": "Was the Kubernetes work professional experience or coursework?",
+        "expected_keywords": [
+          "coursework",
+          "swe 645"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.305,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "The Kubernetes work was from coursework, not professional experience."
+      },
+      {
+        "question": "What happens if a pod crashes?",
+        "expected_keywords": [
+          "deployment controller",
+          "replica"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 0.92,
+        "latency_seconds": 2.214,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "If a pod crashes, Kubernetes' Deployment controller notices the pod is no longer matching the desired replica count and automatically starts a new one to replace it. This helps ensure that a single pod failure does not take the service down..."
+      },
+      {
+        "question": "How were secrets like database credentials handled?",
+        "expected_keywords": [
+          "kubernetes secrets"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 0.8947,
+        "latency_seconds": 1.357,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "Sensitive values like database credentials were not hardcoded into the app. They were stored separately using Kubernetes Secrets and referenced in the deployment config, so the credentials were not in source control or the image itself."
+      },
+      {
+        "question": "What Kubernetes object type was used for the three services, and why not StatefulSet?",
+        "expected_keywords": [
+          "deployment",
+          "stateless"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 0.8611,
+        "latency_seconds": 2.229,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "The Kubernetes object type used for all three services (product catalog, cart, checkout) was **Deployments**.\n\nStatefulSets were not used because the services were stateless application services and did not need stable network identity or p..."
+      },
+      {
+        "question": "How did the services discover each other in the cluster?",
+        "expected_keywords": [
+          "kubernetes services",
+          "dns"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.154,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "How would you debug a service that is not responding in the cluster?",
+        "expected_keywords": [
+          "kubectl"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.163,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What is DocuMind?",
+        "expected_keywords": [
+          "langgraph",
+          "react agent"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.0,
+        "latency_seconds": 0.151,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What five tools does the DocuMind agent use?",
+        "expected_keywords": [
+          "grep_code",
+          "find_symbol",
+          "who_calls",
+          "impact_of",
+          "vector_search"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.175,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "How was DocuMind evaluated?",
+        "expected_keywords": [
+          "ragas"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.0,
+        "latency_seconds": 0.148,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What is Event-Connect and how was it deployed?",
+        "expected_keywords": [
+          "microservices",
+          "ecr",
+          "ec2"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.139,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "Who is the interview with and what company?",
+        "expected_keywords": [
+          "wei chen",
+          "unity"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.161,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What does Unity Gaming Services provide?",
+        "expected_keywords": [
+          "multiplayer",
+          "analytics"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.149,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "Why EKS instead of self-managing Kubernetes?",
+        "expected_keywords": [
+          "control plane"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.171,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What limitation did vector-only retrieval have in DocuMind?",
+        "expected_keywords": [
+          "structural",
+          "call graph"
+        ],
+        "strategy": "plain",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.0,
+        "latency_seconds": 0.134,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      }
+    ],
+    "few_shot": [
+      {
+        "question": "What Kubernetes project is described?",
+        "expected_keywords": [
+          "spring boot",
+          "e-commerce"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 0.9286,
+        "latency_seconds": 1.472,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "The Kubernetes project described is a Spring Boot e-commerce app split into three services: product catalog, cart, and order/checkout."
+      },
+      {
+        "question": "What cloud platform was the app deployed to?",
+        "expected_keywords": [
+          "eks"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 0.922,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "The app was deployed to a Kubernetes cluster on AWS EKS."
+      },
+      {
+        "question": "What tool was used to templatize the Kubernetes manifests?",
+        "expected_keywords": [
+          "helm"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.208,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "Helm was used to templatize the Kubernetes manifests."
+      },
+      {
+        "question": "What CI/CD tools were used?",
+        "expected_keywords": [
+          "jenkins",
+          "github"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.181,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "CI/CD was built with Jenkins connected to GitHub."
+      },
+      {
+        "question": "Was the Kubernetes work professional experience or coursework?",
+        "expected_keywords": [
+          "coursework",
+          "swe 645"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.421,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "The Kubernetes work was from coursework."
+      },
+      {
+        "question": "What happens if a pod crashes?",
+        "expected_keywords": [
+          "deployment controller",
+          "replica"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.093,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "If a pod crashes, Kubernetes' Deployment controller notices the pod is no longer matching the desired replica count and automatically starts a new one to replace it."
+      },
+      {
+        "question": "How were secrets like database credentials handled?",
+        "expected_keywords": [
+          "kubernetes secrets"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.192,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "Sensitive values like database credentials weren't hardcoded into the app \u2014 I used Kubernetes Secrets to store them separately and reference them in the deployment config."
+      },
+      {
+        "question": "What Kubernetes object type was used for the three services, and why not StatefulSet?",
+        "expected_keywords": [
+          "deployment",
+          "stateless"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.139,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "How did the services discover each other in the cluster?",
+        "expected_keywords": [
+          "kubernetes services",
+          "dns"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.14,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "How would you debug a service that is not responding in the cluster?",
+        "expected_keywords": [
+          "kubectl"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.157,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What is DocuMind?",
+        "expected_keywords": [
+          "langgraph",
+          "react agent"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.0,
+        "latency_seconds": 0.169,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What five tools does the DocuMind agent use?",
+        "expected_keywords": [
+          "grep_code",
+          "find_symbol",
+          "who_calls",
+          "impact_of",
+          "vector_search"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.144,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "How was DocuMind evaluated?",
+        "expected_keywords": [
+          "ragas"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.0,
+        "latency_seconds": 0.151,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What is Event-Connect and how was it deployed?",
+        "expected_keywords": [
+          "microservices",
+          "ecr",
+          "ec2"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.157,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "Who is the interview with and what company?",
+        "expected_keywords": [
+          "wei chen",
+          "unity"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.183,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What does Unity Gaming Services provide?",
+        "expected_keywords": [
+          "multiplayer",
+          "analytics"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.153,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "Why EKS instead of self-managing Kubernetes?",
+        "expected_keywords": [
+          "control plane"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.156,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What limitation did vector-only retrieval have in DocuMind?",
+        "expected_keywords": [
+          "structural",
+          "call graph"
+        ],
+        "strategy": "few_shot",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.0,
+        "latency_seconds": 0.151,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      }
+    ],
+    "chain_of_thought": [
+      {
+        "question": "What Kubernetes project is described?",
+        "expected_keywords": [
+          "spring boot",
+          "e-commerce"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 0.9286,
+        "latency_seconds": 2.776,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "1. The document mentions a \"Locked-in K8s project story: Spring Boot e-commerce app, split into product catalog / cart / order-checkout (2-3 services).\"\n2. It further describes this project as an \"e-commerce app split into three services: p..."
+      },
+      {
+        "question": "What cloud platform was the app deployed to?",
+        "expected_keywords": [
+          "eks"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 2.316,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "1. The relevant sentence states: \"e-commerce app split into three services: product catalog, cart, and order/checkout. I containerized each with Docker, then deployed the whole thing to a Kubernetes cluster on AWS EKS.\"\n2. This sentence dir..."
+      },
+      {
+        "question": "What tool was used to templatize the Kubernetes manifests?",
+        "expected_keywords": [
+          "helm"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 1.789,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "1. The context states, \"Instead of writing raw YAML manifests by hand, I used Helm to templatize everything\" and \"A Helm chart is basically a packaged, reusable template for your Kubernetes manifests.\"\n2. These sentences directly answer tha..."
+      },
+      {
+        "question": "What CI/CD tools were used?",
+        "expected_keywords": [
+          "jenkins",
+          "github"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 0.9286,
+        "latency_seconds": 3.172,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "1. The context states, \"I used Jenkins connected to GitHub. On a code change, the pipeline would check out the code, run tests, build a Docker image, push it, and then deploy the updated image to the cluster \u2014 through Helm...\"\n2. The contex..."
+      },
+      {
+        "question": "Was the Kubernetes work professional experience or coursework?",
+        "expected_keywords": [
+          "coursework",
+          "swe 645"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 1.0,
+        "latency_seconds": 2.695,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "1. The document explicitly states: \"Kubernetes / Helm experience = coursework (SWE 645), NOT professional work. Always say so.\"\n2. It further clarifies: \"my Kubernetes and Helm experience specifically is from coursework, not a production jo..."
+      },
+      {
+        "question": "What happens if a pod crashes?",
+        "expected_keywords": [
+          "deployment controller",
+          "replica"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 0.7778,
+        "latency_seconds": 2.714,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "1. The following sentences are relevant to the question:\n    * \"15. What happens if a pod crashes? Kubernetes' Deployment controller notices the pod is no longer matching the desired replica count and automatically starts a new one to repla..."
+      },
+      {
+        "question": "How were secrets like database credentials handled?",
+        "expected_keywords": [
+          "kubernetes secrets"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": true,
+        "groundedness_hit": true,
+        "groundedness_ratio": 0.9524,
+        "latency_seconds": 1.642,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "1. The relevant sentence is: \"Sensitive values like database credentials weren't hardcoded into the app \u2014 I used Kubernetes Secrets to store them separately and reference them in the deployment config, so credentials weren't sitting in sour..."
+      },
+      {
+        "question": "What Kubernetes object type was used for the three services, and why not StatefulSet?",
+        "expected_keywords": [
+          "deployment",
+          "stateless"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.126,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "How did the services discover each other in the cluster?",
+        "expected_keywords": [
+          "kubernetes services",
+          "dns"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.134,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "How would you debug a service that is not responding in the cluster?",
+        "expected_keywords": [
+          "kubectl"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.134,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What is DocuMind?",
+        "expected_keywords": [
+          "langgraph",
+          "react agent"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.0,
+        "latency_seconds": 0.151,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What five tools does the DocuMind agent use?",
+        "expected_keywords": [
+          "grep_code",
+          "find_symbol",
+          "who_calls",
+          "impact_of",
+          "vector_search"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.163,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "How was DocuMind evaluated?",
+        "expected_keywords": [
+          "ragas"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.0,
+        "latency_seconds": 0.141,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What is Event-Connect and how was it deployed?",
+        "expected_keywords": [
+          "microservices",
+          "ecr",
+          "ec2"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.147,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "Who is the interview with and what company?",
+        "expected_keywords": [
+          "wei chen",
+          "unity"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.141,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What does Unity Gaming Services provide?",
+        "expected_keywords": [
+          "multiplayer",
+          "analytics"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.3333,
+        "latency_seconds": 0.157,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "Why EKS instead of self-managing Kubernetes?",
+        "expected_keywords": [
+          "control plane"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.1667,
+        "latency_seconds": 0.158,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      },
+      {
+        "question": "What limitation did vector-only retrieval have in DocuMind?",
+        "expected_keywords": [
+          "structural",
+          "call graph"
+        ],
+        "strategy": "chain_of_thought",
+        "accuracy_hit": false,
+        "groundedness_hit": false,
+        "groundedness_ratio": 0.0,
+        "latency_seconds": 0.148,
+        "num_retrieved_chunks": 10,
+        "answer_preview": "I couldn't generate an answer from the document. Please try rephrasing your question."
+      }
+    ]
+  },
+  "comparable_questions": 7,
+  "note": "Scored 7/18 questions where all three strategies returned a real model answer (API errors excluded)."
+}

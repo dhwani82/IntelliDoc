@@ -1,0 +1,343 @@
+{
+  "doc_id": null,
+  "top_k": 5,
+  "num_questions": 18,
+  "num_chunks": 513,
+  "base": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "hits": 13,
+    "hit_rate": 0.7222
+  },
+  "finetuned": {
+    "model": "D:\\Projects\\Document Parser\\pdf-chat-rag\\backend\\models\\finetuned-embeddings",
+    "hits": 15,
+    "hit_rate": 0.8333
+  },
+  "hit_rate_delta": 0.1111,
+  "per_question": {
+    "base": [
+      {
+        "question": "What Kubernetes project is described?",
+        "expected_keywords": [
+          "spring boot",
+          "e-commerce"
+        ],
+        "hit": false,
+        "top_k_preview": "which is something I'd want to learn in a real infra role where traffic isn't predictable. 19. How did your services talk to each other \u2014 product catalog, cart, checkout? They communicated over the cluster's internal networking, using Kuber"
+      },
+      {
+        "question": "What cloud platform was the app deployed to?",
+        "expected_keywords": [
+          "eks"
+        ],
+        "hit": false,
+        "top_k_preview": "nd-to-end CI/CD pipeline using GitHub Actions that builds all services, pushes Docker images to AWS ECR, and deploys to EC2 via SSH \u2014 reducing deployment to a fully automated 8-minute pipeline. CuepidLove \u2014 AI-Powered Social Mobile Applicat"
+      },
+      {
+        "question": "What tool was used to templatize the Kubernetes manifests?",
+        "expected_keywords": [
+          "helm"
+        ],
+        "hit": true,
+        "top_k_preview": "through Helm. What made that project click for me was seeing how Kubernetes actually manages reliability \u2014 if a pod crashed, the Deployment controller would notice it didn't match the desired replica count and spin up a new one automaticall"
+      },
+      {
+        "question": "What CI/CD tools were used?",
+        "expected_keywords": [
+          "jenkins",
+          "github"
+        ],
+        "hit": false,
+        "top_k_preview": "orchestration. It combines five tools: grep_code for pattern search, find_symbol for definition lookup, who_calls for call graph traversal, impact_of for change impact analysis, and vector_search for semantic retrieval over embeddings. The "
+      },
+      {
+        "question": "Was the Kubernetes work professional experience or coursework?",
+        "expected_keywords": [
+          "coursework",
+          "swe 645"
+        ],
+        "hit": true,
+        "top_k_preview": "shipped production apps, and it's genuinely shaped how I like to work: I don't need the assignment to match my original plan to take it seriously or do good work in it. So if I ended up in an infrastructure-focused role instead of AI/ML, I "
+      },
+      {
+        "question": "What happens if a pod crashes?",
+        "expected_keywords": [
+          "deployment controller",
+          "replica"
+        ],
+        "hit": true,
+        "top_k_preview": "so I could focus on the application and deployment side rather than cluster administration itself. For a course project that was the practical choice; I know self-managed clusters, like with Rancher or RKE, exist as an alternative where you"
+      },
+      {
+        "question": "How were secrets like database credentials handled?",
+        "expected_keywords": [
+          "kubernetes secrets"
+        ],
+        "hit": true,
+        "top_k_preview": "take the service down. 16. How did you handle configuration or secrets, like database credentials? Sensitive values like database credentials weren't hardcoded into the app \u2014 I used Kubernetes Secrets to store them separately and reference "
+      },
+      {
+        "question": "What Kubernetes object type was used for the three services, and why not StatefulSet?",
+        "expected_keywords": [
+          "deployment",
+          "stateless"
+        ],
+        "hit": true,
+        "top_k_preview": "which is something I'd want to learn in a real infra role where traffic isn't predictable. 19. How did your services talk to each other \u2014 product catalog, cart, checkout? They communicated over the cluster's internal networking, using Kuber"
+      },
+      {
+        "question": "How did the services discover each other in the cluster?",
+        "expected_keywords": [
+          "kubernetes services",
+          "dns"
+        ],
+        "hit": true,
+        "top_k_preview": "which is something I'd want to learn in a real infra role where traffic isn't predictable. 19. How did your services talk to each other \u2014 product catalog, cart, checkout? They communicated over the cluster's internal networking, using Kuber"
+      },
+      {
+        "question": "How would you debug a service that is not responding in the cluster?",
+        "expected_keywords": [
+          "kubectl"
+        ],
+        "hit": true,
+        "top_k_preview": "so I could focus on the application and deployment side rather than cluster administration itself. For a course project that was the practical choice; I know self-managed clusters, like with Rancher or RKE, exist as an alternative where you"
+      },
+      {
+        "question": "What is DocuMind?",
+        "expected_keywords": [
+          "langgraph",
+          "react agent"
+        ],
+        "hit": false,
+        "top_k_preview": "lows to ensure secure and reliable quiz delivery. Research Experience AI-Accelerated Software Engineering (DocuMind) Sept 2025 \u2013 Dec 2025 George Mason University \u2013 Prof. Thomas LaToza \u2022 Architected and implemented a scalable Python-based ba"
+      },
+      {
+        "question": "What five tools does the DocuMind agent use?",
+        "expected_keywords": [
+          "grep_code",
+          "find_symbol",
+          "who_calls",
+          "impact_of",
+          "vector_search"
+        ],
+        "hit": true,
+        "top_k_preview": "orchestration. It combines five tools: grep_code for pattern search, find_symbol for definition lookup, who_calls for call graph traversal, impact_of for change impact analysis, and vector_search for semantic retrieval over embeddings. The "
+      },
+      {
+        "question": "How was DocuMind evaluated?",
+        "expected_keywords": [
+          "ragas"
+        ],
+        "hit": true,
+        "top_k_preview": "improvements to prompting, routing, and retrieval quality. I treated correctness as something to measure and defend, not assume \u2014 which is the difference between a real system and a demo. 7. Tell me about a time something didn't work as pla"
+      },
+      {
+        "question": "What is Event-Connect and how was it deployed?",
+        "expected_keywords": [
+          "microservices",
+          "ecr",
+          "ec2"
+        ],
+        "hit": true,
+        "top_k_preview": "not a production job, so I understand if that's a real gap for what you need right now. What I'd push back on gently is that deployment and reliability haven't been theoretical for me even outside that course \u2014 Event-Connect was a real syst"
+      },
+      {
+        "question": "Who is the interview with and what company?",
+        "expected_keywords": [
+          "wei chen",
+          "unity"
+        ],
+        "hit": false,
+        "top_k_preview": "gan Stanley, MIT Jasmine Wu Associate Multi-sector Deloitte, Harvard 2024 Organizational Highlights We welcomed two new senior hires to the investment team in 2024: Priya Nair as Partner covering Enterprise Software (previously at Bessemer "
+      },
+      {
+        "question": "What does Unity Gaming Services provide?",
+        "expected_keywords": [
+          "multiplayer",
+          "analytics"
+        ],
+        "hit": true,
+        "top_k_preview": "across mobile, PC, console, and XR \u2014 it powers over half of the world's mobile games, and it's also used well beyond gaming, in automotive, film, and architecture. Beyond the engine itself, Unity Gaming Services provides cloud infrastructur"
+      },
+      {
+        "question": "Why EKS instead of self-managing Kubernetes?",
+        "expected_keywords": [
+          "control plane"
+        ],
+        "hit": true,
+        "top_k_preview": "20. What's the difference between a Deployment and a StatefulSet, and which did you use? I used Deployments for all three services, since none of them needed stable network identity or persistent per-instance storage \u2014 they're stateless app"
+      },
+      {
+        "question": "What limitation did vector-only retrieval have in DocuMind?",
+        "expected_keywords": [
+          "structural",
+          "call graph"
+        ],
+        "hit": true,
+        "top_k_preview": "around an API call. 27. What's RAG, and how did you use it? Retrieval-Augmented Generation means grounding the model's answers in retrieved context rather than relying purely on what it learned in training. In DocuMind, that's the vector_se"
+      }
+    ],
+    "finetuned": [
+      {
+        "question": "What Kubernetes project is described?",
+        "expected_keywords": [
+          "spring boot",
+          "e-commerce"
+        ],
+        "hit": false,
+        "top_k_preview": "Combined with the Kubernetes and Helm work from my coursework, I felt like I had a reasonable foundation to build on if there's an infrastructure opening. I'll be honest that my production experience leans more toward the application and ba"
+      },
+      {
+        "question": "What cloud platform was the app deployed to?",
+        "expected_keywords": [
+          "eks"
+        ],
+        "hit": true,
+        "top_k_preview": "Docker for scalable deployment. Research Experience AI-Accelerated Software Engineering (DocuMind) Sept 2025 \u2013 Dec 2025 George Mason University \u2014 Prof. Thomas LaToza Python, Flask, AST Parsing, LLMs, OpenAI API \u2022 Investigated LLM-assisted i"
+      },
+      {
+        "question": "What tool was used to templatize the Kubernetes manifests?",
+        "expected_keywords": [
+          "helm"
+        ],
+        "hit": true,
+        "top_k_preview": "17. How did your CI/CD pipeline tie into the Kubernetes deployment? I used Jenkins connected to GitHub. On a code change, the pipeline would check out the code, run tests, build a Docker image, push it, and then deploy the updated image to "
+      },
+      {
+        "question": "What CI/CD tools were used?",
+        "expected_keywords": [
+          "jenkins",
+          "github"
+        ],
+        "hit": true,
+        "top_k_preview": "nd-to-end CI/CD pipeline using GitHub Actions that builds all services, pushes Docker images to AWS ECR, and deploys to EC2 via SSH \u2014 reducing deployment to a fully automated 8-minute pipeline. CuepidLove \u2014 AI-Powered Social Mobile Applicat"
+      },
+      {
+        "question": "Was the Kubernetes work professional experience or coursework?",
+        "expected_keywords": [
+          "coursework",
+          "swe 645"
+        ],
+        "hit": true,
+        "top_k_preview": "Combined with the Kubernetes and Helm work from my coursework, I felt like I had a reasonable foundation to build on if there's an infrastructure opening. I'll be honest that my production experience leans more toward the application and ba"
+      },
+      {
+        "question": "What happens if a pod crashes?",
+        "expected_keywords": [
+          "deployment controller",
+          "replica"
+        ],
+        "hit": true,
+        "top_k_preview": "through Helm. What made that project click for me was seeing how Kubernetes actually manages reliability \u2014 if a pod crashed, the Deployment controller would notice it didn't match the desired replica count and spin up a new one automaticall"
+      },
+      {
+        "question": "How were secrets like database credentials handled?",
+        "expected_keywords": [
+          "kubernetes secrets"
+        ],
+        "hit": true,
+        "top_k_preview": "take the service down. 16. How did you handle configuration or secrets, like database credentials? Sensitive values like database credentials weren't hardcoded into the app \u2014 I used Kubernetes Secrets to store them separately and reference "
+      },
+      {
+        "question": "What Kubernetes object type was used for the three services, and why not StatefulSet?",
+        "expected_keywords": [
+          "deployment",
+          "stateless"
+        ],
+        "hit": true,
+        "top_k_preview": "separate static YAML files for each service and each environment, you define the structure once with placeholder values, and a values.yaml file controls what actually gets deployed \u2014 things like image version or replica count. It made it ea"
+      },
+      {
+        "question": "How did the services discover each other in the cluster?",
+        "expected_keywords": [
+          "kubernetes services",
+          "dns"
+        ],
+        "hit": false,
+        "top_k_preview": "so I could focus on the application and deployment side rather than cluster administration itself. For a course project that was the practical choice; I know self-managed clusters, like with Rancher or RKE, exist as an alternative where you"
+      },
+      {
+        "question": "How would you debug a service that is not responding in the cluster?",
+        "expected_keywords": [
+          "kubectl"
+        ],
+        "hit": true,
+        "top_k_preview": "so I could focus on the application and deployment side rather than cluster administration itself. For a course project that was the practical choice; I know self-managed clusters, like with Rancher or RKE, exist as an alternative where you"
+      },
+      {
+        "question": "What is DocuMind?",
+        "expected_keywords": [
+          "langgraph",
+          "react agent"
+        ],
+        "hit": true,
+        "top_k_preview": "Research \u2014 AI-Accelerated Software Engineering (DocuMind) Sept 2025 \u2013 Dec 2025 George Mason University, Prof. Thomas LaToza Fairfax, VA \u2022 Built a production-grade agentic platform using a LangGraph ReAct agent combining vector search, code "
+      },
+      {
+        "question": "What five tools does the DocuMind agent use?",
+        "expected_keywords": [
+          "grep_code",
+          "find_symbol",
+          "who_calls",
+          "impact_of",
+          "vector_search"
+        ],
+        "hit": true,
+        "top_k_preview": "orchestration. It combines five tools: grep_code for pattern search, find_symbol for definition lookup, who_calls for call graph traversal, impact_of for change impact analysis, and vector_search for semantic retrieval over embeddings. The "
+      },
+      {
+        "question": "How was DocuMind evaluated?",
+        "expected_keywords": [
+          "ragas"
+        ],
+        "hit": true,
+        "top_k_preview": "Research \u2014 AI-Accelerated Software Engineering (DocuMind) Sept 2025 \u2013 Dec 2025 George Mason University, Prof. Thomas LaToza Fairfax, VA \u2022 Built a production-grade agentic platform using a LangGraph ReAct agent combining vector search, code "
+      },
+      {
+        "question": "What is Event-Connect and how was it deployed?",
+        "expected_keywords": [
+          "microservices",
+          "ecr",
+          "ec2"
+        ],
+        "hit": true,
+        "top_k_preview": "Event-Connect (independent microservices platform), then the Kubernetes coursework (SWE 645) most recently. Keep it moving quickly \u2014 a sentence or two per stop \u2014 since he'll likely redirect to whatever interests him most. 3. Why are you int"
+      },
+      {
+        "question": "Who is the interview with and what company?",
+        "expected_keywords": [
+          "wei chen",
+          "unity"
+        ],
+        "hit": false,
+        "top_k_preview": "end interview questions HTML & Accessibility 12 questions Q1\u2013Q12 CSS & Layouts 12 questions Q13\u2013Q24 JavaScript Core 14 questions Q25\u2013Q38 React & Component Architecture 14 questions Q39\u2013Q52 Performance & Optimization 12 questions Q53\u2013Q64 Typ"
+      },
+      {
+        "question": "What does Unity Gaming Services provide?",
+        "expected_keywords": [
+          "multiplayer",
+          "analytics"
+        ],
+        "hit": true,
+        "top_k_preview": "across mobile, PC, console, and XR \u2014 it powers over half of the world's mobile games, and it's also used well beyond gaming, in automotive, film, and architecture. Beyond the engine itself, Unity Gaming Services provides cloud infrastructur"
+      },
+      {
+        "question": "Why EKS instead of self-managing Kubernetes?",
+        "expected_keywords": [
+          "control plane"
+        ],
+        "hit": true,
+        "top_k_preview": "Combined with the Kubernetes and Helm work from my coursework, I felt like I had a reasonable foundation to build on if there's an infrastructure opening. I'll be honest that my production experience leans more toward the application and ba"
+      },
+      {
+        "question": "What limitation did vector-only retrieval have in DocuMind?",
+        "expected_keywords": [
+          "structural",
+          "call graph"
+        ],
+        "hit": true,
+        "top_k_preview": "Research \u2014 AI-Accelerated Software Engineering (DocuMind) Sept 2025 \u2013 Dec 2025 George Mason University, Prof. Thomas LaToza Fairfax, VA \u2022 Built a production-grade agentic platform using a LangGraph ReAct agent combining vector search, code "
+      }
+    ]
+  }
+}
